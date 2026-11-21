@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Path &amp; Pulse &mdash; Explore with purpose
+  </title>
+  <link href="path-and-pulse-navigation-kyoto-guide.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <nav aria-label="Main navigation" class="nav">
+    <a class="brand" href="#home">
+     <img alt="Path &amp; Pulse logo" src="path-and-pulse-logo.png"/>
+     <span class="brand-copy">
+      <strong>
+       Path
+       <span>
+        &amp;
+       </span>
+       Pulse
+      </strong>
+      <small>
+       Find your next way
+      </small>
+     </span>
+    </a>
+    <button aria-controls="nav-links" aria-expanded="false" class="menu" type="button">
+     Menu
+    </button>
+    <div class="links" id="nav-links">
+     <a href="#home">
+      Home
+     </a>
+     <a href="#services">
+      Our Services
+     </a>
+     <a href="#about-title">
+      About Us
+     </a>
+     <a href="#destination">
+      Destination
+     </a>
+     <a href="#travel-tips">
+      Travel Tips
+     </a>
+     <a href="#contact">
+      Contact Us
+     </a>
+     <div class="account-actions">
+      <button aria-controls="login-form" aria-expanded="false" class="login-toggle" id="login-toggle" type="button">
+       Log in
+      </button>
+      <button aria-controls="currency-card" aria-expanded="false" aria-label="Currency Converter" class="currency-toggle" id="currency-toggle" title="Currency Converter" type="button">
+       <span aria-hidden="true">
+        ₹ &rlarr; $
+       </span>
+      </button>
+     </div>
+    </div>
+   </nav>
+   <nav aria-label="Travel services" class="service-nav">
+    <a href="#holidays">
+     Holidays
+    </a>
+    <a href="#services">
+     Flights
+    </a>
+    <a href="#services">
+     Hotels
+    </a>
+    <a href="#services">
+     Car Rentals
+    </a>
+    <a href="#destination">
+     Cruises
+    </a>
+   </nav>
+   <form class="login-card nav-login" hidden="" id="login-form">
+    <p class="eyebrow">
+     Welcome back
+    </p>
+    <h2>
+     Log in
+    </h2>
+    <p class="login-lead">
+     Use your Gmail address to continue.
+    </p>
+    <label class="login-field" for="username">
+     Gmail address
+     <input autocomplete="username" id="username" placeholder="you@gmail.com" required="" type="email"/>
+    </label>
+    <label class="login-field" for="password">
+     Password
+     <input autocomplete="current-password" id="password" placeholder="Enter your password" required="" type="password"/>
+    </label>
+    <button class="login-submit" type="submit">
+     Continue with email
+    </button>
+    <div class="login-divider">
+     or
+    </div>
+    <button class="google-submit" id="google-login" type="button">
+     <svg aria-hidden="true" viewbox="0 0 48 48">
+      <path d="M43.6 24.5c0-1.4-.1-2.8-.4-4.1H24v7.8h11a9.4 9.4 0 0 1-4.1 6.2v5.1h6.6c3.9-3.6 6.1-8.8 6.1-15Z" fill="#4285F4">
+      </path>
+      <path d="M24 44c5.5 0 10.1-1.8 13.5-4.8l-6.6-5.1c-1.8 1.2-4.1 2-6.9 2-5.3 0-9.8-3.6-11.4-8.4H5.8v5.3A20 20 0 0 0 24 44Z" fill="#34A853">
+      </path>
+      <path d="M12.6 27.7a12 12 0 0 1 0-7.4V15H5.8a20 20 0 0 0 0 18l6.8-5.3Z" fill="#FBBC05">
+      </path>
+      <path d="M24 12.1c3 0 5.7 1 7.8 3.1l5.9-5.9C34.1 6 29.5 4 24 4A20 20 0 0 0 5.8 15l6.8 5.3c1.6-4.8 6.1-8.2 11.4-8.2Z" fill="#EA4335">
+      </path>
+     </svg>
+     Continue with Google
+    </button>
+    <p aria-live="polite" class="login-status" id="login-status">
+     Demo sign-in &mdash; connect an authentication service to continue.
+    </p>
+   </form>
+   <section aria-labelledby="currency-title" class="currency-card" hidden="" id="currency-card">
+    <p class="eyebrow" style="margin:0 0 6px">
+     Plan with clarity
+    </p>
+    <h2 id="currency-title">
+     Currency Converter
+    </h2>
+    <p class="currency-lead">
+     Convert using the latest available reference rates.
+    </p>
+    <div class="currency-row">
+     <label class="currency-field" for="currency-amount">
+      Amount
+      <input id="currency-amount" inputmode="decimal" min="0" step="any" type="number" value="1"/>
+     </label>
+     <label class="currency-field" for="currency-from">
+      From
+      <select id="currency-from">
+       <option>
+        USD
+       </option>
+       <option>
+        EUR
+       </option>
+       <option>
+        GBP
+       </option>
+       <option>
+        INR
+       </option>
+       <option>
+        JPY
+       </option>
+       <option>
+        AUD
+       </option>
+       <option>
+        CAD
+       </option>
+       <option>
+        CHF
+       </option>
+       <option>
+        CNY
+       </option>
+       <option>
+        NZD
+       </option>
+       <option>
+        SGD
+       </option>
+       <option>
+        THB
+       </option>
+       <option>
+        MXN
+       </option>
+       <option>
+        BRL
+       </option>
+       <option>
+        ZAR
+       </option>
+      </select>
+     </label>
+     <label class="currency-field" for="currency-to">
+      To
+      <select id="currency-to">
+       <option>
+        EUR
+       </option>
+       <option>
+        USD
+       </option>
+       <option>
+        GBP
+       </option>
+       <option>
+        INR
+       </option>
+       <option>
+        JPY
+       </option>
+       <option>
+        AUD
+       </option>
+       <option>
+        CAD
+       </option>
+       <option>
+        CHF
+       </option>
+       <option>
+        CNY
+       </option>
+       <option>
+        NZD
+       </option>
+       <option>
+        SGD
+       </option>
+       <option>
+        THB
+       </option>
+       <option>
+        MXN
+       </option>
+       <option>
+        BRL
+       </option>
+       <option>
+        ZAR
+       </option>
+      </select>
+     </label>
+    </div>
+    <div class="currency-result">
+     <small id="currency-summary">
+      1 USD equals
+     </small>
+     <output id="currency-output">
+      Loading&hellip;
+     </output>
+    </div>
+    <p aria-live="polite" class="currency-status" id="currency-status">
+     Fetching current rate&hellip;
+    </p>
+    <small class="currency-source">
+     Rates by
+     <a href="https://www.exchangerate-api.com/docs/free" rel="noreferrer" target="_blank">
+      ExchangeRate-API
+     </a>
+     . Indicative only; your bank may use different rates.
+    </small>
+   </section>
+  </header>
+  <main id="home">
+   <div class="hero-layout">
+    <section class="intro">
+     <div class="eyebrow">
+      Follow your own compass
+     </div>
+     <h1>
+      Find the
+      <span>
+       feeling
+      </span>
+      <br/>
+      of somewhere new.
+     </h1>
+     <p>
+      Thoughtful destination inspiration and practical travel tips for the journeys that stay with you.
+     </p>
+     <a class="cta" href="#destination">
+      Explore destinations&nbsp; &rarr;
+     </a>
+    </section>
+   </div>
+  </main>
+  <section aria-label="Travel inspiration photos" class="slider-wrap">
+   <div class="slider" id="photo-slider">
+    <figure class="slide active">
+     <img alt="Winding road beneath the snowy peaks of Patagonia" loading="lazy" src="path-pulse-slide-1-optimized.jpg"/>
+     <figcaption class="caption">
+      Take the long road through Patagonia
+     </figcaption>
+    </figure>
+    <figure class="slide">
+     <img alt="Marrakech market square glowing in the evening light" loading="lazy" src="path-pulse-slide-2-optimized.jpg"/>
+     <figcaption class="caption">
+      Find the rhythm of Marrakech
+     </figcaption>
+    </figure>
+    <figure class="slide">
+     <img alt="Kyoto Golden Pavilion beside its garden pond" loading="lazy" src="path-pulse-slide-3-optimized.jpg"/>
+     <figcaption class="caption">
+      Pause beside Kyoto golden light
+     </figcaption>
+    </figure>
+    <figure class="slide">
+     <img alt="Colorful Amalfi Coast village above the Mediterranean Sea" loading="lazy" src="path-pulse-slide-4-optimized.jpg"/>
+     <figcaption class="caption">
+      Follow the coast along Amalfi
+     </figcaption>
+    </figure>
+    <div class="controls">
+     <button aria-label="Previous slide" class="arrow" data-step="-1" type="button">
+      &lsaquo;
+     </button>
+     <button aria-label="Next slide" class="arrow" data-step="1" type="button">
+      &rsaquo;
+     </button>
+    </div>
+    <div class="dots">
+     <button aria-current="true" aria-label="Show slide 1" class="dot" data-index="0">
+     </button>
+     <button aria-current="false" aria-label="Show slide 2" class="dot" data-index="1">
+     </button>
+     <button aria-current="false" aria-label="Show slide 3" class="dot" data-index="2">
+     </button>
+     <button aria-current="false" aria-label="Show slide 4" class="dot" data-index="3">
+     </button>
+    </div>
+   </div>
+  </section>
+  <section class="wrap about">
+   <article class="panel">
+    <p class="eyebrow">
+     A little about us
+    </p>
+    <h2 id="about-title">
+     About Path &amp; Pulse
+    </h2>
+    <p>
+     Path &amp; Pulse is for curious travelers who want more than a place to visit. We bring together inspiring destinations, thoughtful local experiences, and useful advice to help you plan a journey that feels like your own.
+    </p>
+    <p>
+     From the first spark of an idea to the small details that make a trip smoother, we help you find your path and follow what moves you.
+    </p>
+   </article>
+  </section>
+  <section class="wrap" id="services">
+   <div class="panel">
+    <p class="eyebrow">
+     Plan with confidence
+    </p>
+    <h2>
+     Travel Resources
+    </h2>
+    <p class="lead">
+     Handy starting points for a smoother, more thoughtful trip.
+    </p>
+    <div class="grid3">
+     <article class="resource">
+      <h3>
+       Trip Planning
+      </h3>
+      <p>
+       Shape your route, set a realistic pace, and leave room for the unexpected.
+      </p>
+     </article>
+     <article class="resource">
+      <h3>
+       Packing Guide
+      </h3>
+      <p>
+       Build a simple packing list around your destination, season, and plans.
+      </p>
+     </article>
+     <article class="resource">
+      <h3>
+       Travel Know-How
+      </h3>
+      <p>
+       Keep key documents, local customs, and practical essentials in mind.
+      </p>
+     </article>
+    </div>
+   </div>
+  </section>
+  <section class="wrap holiday-wrap" id="holidays">
+   <div class="panel holiday-panel">
+    <p class="eyebrow">
+     Choose your kind of escape
+    </p>
+    <h2>
+     Holidays for every kind of traveler
+    </h2>
+    <p class="lead">
+     Whether you want a slow weekend or a journey far from your routine, start with the feeling you want to bring home.
+    </p>
+    <div class="holiday-grid">
+     <article class="holiday-card">
+      <span class="holiday-type">
+       Easygoing &middot; 3&ndash;5 days
+      </span>
+      <h3>
+       Coastal slow-down
+      </h3>
+      <p>
+       Spend unhurried days by the water, wander a nearby town, and leave space for long lunches and sunset walks.
+      </p>
+      <a href="#destination">
+       Find a coastal escape &rarr;
+      </a>
+     </article>
+     <article class="holiday-card">
+      <span class="holiday-type">
+       Culture &middot; 4&ndash;7 days
+      </span>
+      <h3>
+       City &amp; culture
+      </h3>
+      <p>
+       Explore historic streets, local markets, galleries, and neighborhood caf&eacute;s at a pace that lets you look closer.
+      </p>
+      <a href="#destination">
+       Explore city destinations &rarr;
+      </a>
+     </article>
+     <article class="holiday-card">
+      <span class="holiday-type">
+       Outdoors &middot; 5&ndash;8 days
+      </span>
+      <h3>
+       Mountain reset
+      </h3>
+      <p>
+       Trade busy days for fresh air, scenic trails, quiet mornings, and welcoming places to rest.
+      </p>
+      <a href="#destination">
+       Discover nature trips &rarr;
+      </a>
+     </article>
+     <article class="holiday-card">
+      <span class="holiday-type">
+       Together &middot; 5&ndash;10 days
+      </span>
+      <h3>
+       Memorable with family
+      </h3>
+      <p>
+       Build a trip around shared discoveries, flexible plans, and time to recharge.
+      </p>
+      <a href="#destination">
+       Get family trip ideas &rarr;
+      </a>
+     </article>
+    </div>
+   </div>
+  </section>
+  <section class="wrap" id="destination">
+   <div class="panel">
+    <p class="eyebrow">
+     Somewhere to begin
+    </p>
+    <h2>
+     Featured Destinations
+    </h2>
+    <p class="lead">
+     Four places to spark your next itinerary.
+    </p>
+    <div class="destinations">
+     <article class="destination">
+      <span class="place">
+       Japan &middot; Culture &amp; food
+      </span>
+      <h3>
+       Kyoto
+      </h3>
+      <p>
+       Temple paths, quiet gardens, and lively lanes where tradition meets everyday city life.
+      </p>
+      <a class="guide-link" href="#kyoto-guide">
+       Open the Kyoto guide &rarr;
+      </a>
+     </article>
+     <article class="destination">
+      <span class="place">
+       Italy &middot; Coast &amp; villages
+      </span>
+      <h3>
+       Amalfi Coast
+      </h3>
+      <p>
+       Cliffside towns, sea views, and slow afternoons along the southern Italian coast.
+      </p>
+     </article>
+     <article class="destination">
+      <span class="place">
+       Morocco &middot; Markets &amp; riads
+      </span>
+      <h3>
+       Marrakech
+      </h3>
+      <p>
+       Colorful souks, tranquil courtyards, and the aromas of Moroccan cuisine.
+      </p>
+     </article>
+     <article class="destination">
+      <span class="place">
+       Chile &amp; Argentina &middot; Nature
+      </span>
+      <h3>
+       Patagonia
+      </h3>
+      <p>
+       Open skies, mountain trails, and vast landscapes at the edge of the world.
+      </p>
+     </article>
+    </div>
+   </div>
+  </section>
+  <section class="wrap" id="kyoto-guide">
+   <div class="panel">
+    <p class="eyebrow">
+     A thoughtful first visit
+    </p>
+    <h2>
+     Kyoto, at your own pace
+    </h2>
+    <p class="lead">
+     A flexible three-day starting point. Group nearby areas together, leave room for breaks, and check opening details before you go.
+    </p>
+    <div class="kyoto-guide-grid">
+     <article class="guide-card">
+      <h3>
+       Day 1 &middot; Eastern Kyoto
+      </h3>
+      <p>
+       Spend the day around Higashiyama: choose a temple or garden, wander historic lanes, then slow down for dinner nearby. Start early at popular spots and keep the route compact.
+      </p>
+     </article>
+     <article class="guide-card">
+      <h3>
+       Day 2 &middot; Arashiyama
+      </h3>
+      <p>
+       Head west for riverside scenery and gardens. Pick a few places that interest you instead of trying to cover the whole area; use local trains and walk between nearby stops.
+      </p>
+     </article>
+     <article class="guide-card">
+      <h3>
+       Day 3 &middot; Central Kyoto
+      </h3>
+      <p>
+       Explore central neighborhoods, a market or museum, and one final temple or garden. Keep the afternoon open for a caf&eacute; stop, shopping, or anything you discovered along the way.
+      </p>
+     </article>
+     <article class="guide-card">
+      <h3>
+       When to go
+      </h3>
+      <p>
+       Spring and autumn are popular and often comfortable for walking. Kyoto summers can be hot and humid, while winters are chilly. Check seasonal conditions and pack accordingly.
+      </p>
+      <a class="guide-link" href="https://kyoto.travel/en/seasonal-info/" rel="noreferrer" target="_blank">
+       Official seasonal guide &nearrow;
+      </a>
+     </article>
+     <article class="guide-card">
+      <h3>
+       Getting around
+      </h3>
+      <p>
+       Combine trains, subways, and buses based on the day&rsquo;s route. Check current fares and passes for your itinerary, allow extra time at busy periods, and consider luggage delivery for hands-free sightseeing.
+      </p>
+      <a class="guide-link" href="https://kyoto.travel/en/getting-around/" rel="noreferrer" target="_blank">
+       Official transport guide &nearrow;
+      </a>
+     </article>
+     <article class="guide-card">
+      <h3>
+       Be a considerate guest
+      </h3>
+      <p>
+       Respect signs and photography rules, keep noise low in residential areas, and give local residents space on streets and transit. Check the city&rsquo;s visitor guidance before you go.
+      </p>
+      <a class="guide-link" href="https://kyoto.travel/en/responsible-travel/" rel="noreferrer" target="_blank">
+       Responsible travel tips &nearrow;
+      </a>
+     </article>
+    </div>
+   </div>
+  </section>
+  <section class="wrap" id="travel-tips">
+   <div class="panel">
+    <p class="eyebrow">
+     Make the journey smoother
+    </p>
+    <h2>
+     Travel Tips
+    </h2>
+    <p class="lead">
+     A few thoughtful habits can make every trip feel easier.
+    </p>
+    <div class="tips">
+     <article class="tip">
+      <h3>
+       Leave breathing room
+      </h3>
+      <p>
+       Plan one or two anchors each day, then keep time open for the unexpected.
+      </p>
+     </article>
+     <article class="tip">
+      <h3>
+       Pack for your plans
+      </h3>
+      <p>
+       Check the forecast and build a small mix of layers around what you will do.
+      </p>
+     </article>
+     <article class="tip">
+      <h3>
+       Keep essentials close
+      </h3>
+      <p>
+       Store copies of important documents separately and keep originals secure.
+      </p>
+     </article>
+    </div>
+   </div>
+  </section>
+  <section class="wrap">
+   <div class="panel newsletter">
+    <div class="newsletter-copy">
+     <p class="eyebrow">
+      A little inspiration in your inbox
+     </p>
+     <h2>
+      The Path &amp; Pulse Newsletter
+     </h2>
+     <p>
+      Get destination ideas and practical travel notes for your next journey.
+     </p>
+    </div>
+    <form id="newsletter-form">
+     <label class="eyebrow" for="newsletter-email">
+      Email address
+     </label>
+     <div class="signup">
+      <input id="newsletter-email" placeholder="you@example.com" required="" type="email"/>
+      <button type="submit">
+       Subscribe
+      </button>
+     </div>
+     <p aria-live="polite" class="signup-status" id="signup-status">
+      Demo form &mdash; connect a mailing list service to receive subscriptions.
+     </p>
+    </form>
+   </div>
+  </section>
+  <footer class="footer" id="contact">
+   <div class="footer-inner">
+    <a class="footer-brand" href="#home">
+     <img alt="" src="path-and-pulse-logo.png"/>
+     <span>
+      Path &amp; Pulse
+     </span>
+    </a>
+    <p class="copyright">
+     &copy; 2026 Path &amp; Pulse. All rights reserved.
+    </p>
+   </div>
+  </footer>
+  <script defer="True" src="path-and-pulse-navigation-kyoto-guide.js">
+  </script>
+ </body>
+</html>
